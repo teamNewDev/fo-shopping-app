@@ -24,18 +24,23 @@
 
             <label>
                 Quantity:
-                <input type="text" id="quantityInput" value=1>
+                <input type="number" id="quantityInput" value=1>
             </label>
 
             <label>
                 Price:
-                <input type="text" id="priceInput" value=0>
+                <input type="number" id="priceInput" value=0>
             </label>
             
             <button type="submit" id="addItemButton">
                 Add item
             </button>
+            
         </form>
+
+        <button id="clearAllItemButton">
+            Clear all
+        </button>
     </div>
 
     <div id="itemsDiv"></div>
