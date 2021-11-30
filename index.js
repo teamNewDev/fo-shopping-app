@@ -29,17 +29,19 @@ const populateItemsDiv = async () => {
             <p>$${item.price} * ${item.quantity}</p>
         </div>
 
-        <button class="deleteButton" onclick="removeItem(${item.id})">
-            X
-        </button>
+        <div class="item_buttons__container">
+            <button class="deleteButton" onclick="removeItem(${item.id})">
+                X
+            </button>
 
-        <button class="editItemButton" onclick="editItem(event, ${item.id})">
-            Edit item
-        </button>
+            <button class="editItemButton" onclick="editItem(event, ${item.id})">
+                Edit item
+            </button>
 
-        <button class="updateItemButton" onclick="updateItem(event, ${item.id})">
-            Update item
-        </button>
+            <button class="updateItemButton" onclick="updateItem(event, ${item.id})">
+                Update item
+            </button>
+        </div>
 
     </div>
     `).join('')

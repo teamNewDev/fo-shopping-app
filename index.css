@@ -4,11 +4,12 @@
 }
 
 body{
-    background-color: #f2f2f2;
+    background: url(images/bg-intro-desktop.png) rgb(255, 121, 120);
+    font-family: 'Poppins', sans-serif;
 }
 
 nav{
-    background: #00805a;
+    background: #FF3333;
     height: 3rem;
     line-height: 3rem;
     color: white;
@@ -17,7 +18,18 @@ nav{
 }
 
 .container{
+    width: 40rem;
+    margin: 2rem auto;
+    background-color: white;
     padding: 1rem;
+    border-radius: 10px;
+}
+
+.items_Price__Container{
+    width: 42rem;
+    margin: 2rem auto;
+    border-radius: 10px;
+
 }
 
 #itemForm label{
@@ -32,31 +44,68 @@ nav{
 }
 
 #quantityInput, #priceInput{
-    width: 3rem;
+    width: 10rem;
+    margin-left: 2.5rem;
 }
+
+#quantityInput:focus, #priceInput:focus, #nameInput:focus{
+    border: none;
+    outline: 2px solid #FFB366;
+}
+
+#priceInput{
+    margin-left: 4.2rem;
+}
+
+.container input{
+    width: 30rem;
+    border-radius: 10px;
+}
+
 
 #addItemButton{
     border: unset;
-    background: #00805a;
-    color: #fff;
+    background: #FFB366;
     padding: 0.5rem;
+    margin-left: 7rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+    width: 10rem;
+    cursor: pointer;
+    box-shadow: 2px 2px 6px 1px rgba(0,0,0,0.76);
+    -webkit-box-shadow: 2px 2px 6px 1px rgba(0,0,0,0.76);
+    -moz-box-shadow: 2px 2px 6px 1px rgba(0,0,0,0.76);
 }
 
-#itemsDiv{
-    margin-top: 3rem;
-    margin-bottom: 2rem;
+#clearAllItemButton{
+    border: unset;
+    padding: 0.5rem;
+    margin-left: 7rem;
+    margin-top: 1rem;
+    border-radius: 10px;
+    width: 10rem;
+    cursor: pointer;
+    background-color: #FFB366;
+    box-shadow: 2px 2px 6px 1px rgba(0,0,0,0.76);
+    -webkit-box-shadow: 2px 2px 6px 1px rgba(0,0,0,0.76);
+    -moz-box-shadow: 2px 2px 6px 1px rgba(0,0,0,0.76);
 }
+
 
 .item{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    background: #eaeaea;
-    margin-bottom: 0.5rem;
+    background: white;
+    margin-bottom: 1rem;
+    width: 41.5rem;
+    border-left: 8px solid #FF3333;
+    border-radius: 0 5px 5px 0;
 }
 
 .checkbox{
-    height: 100%;
-    width: 2.5rem;
+    height: 2rem;
+    width: 4.5rem;
+    margin-top: 0.5rem;
 }
 
 .itemInfo{
@@ -66,21 +115,54 @@ nav{
 .deleteButton{
     margin: 0 0 0 auto;
     border: unset;
-    background: #b10000;
-    color: #fff;
     font-size: 0.8rem;
     width: 2.5rem;
-    height: 100%;
+    /*box-shadow: 0.8px 3px 2px black;*/
+    box-shadow: 2px 3px 12px 1px rgba(0,0,0,0.76);
+    -webkit-box-shadow: 2px 3px 12px 1px rgba(0,0,0,0.76);
+    -moz-box-shadow: 2px 3px 12px 1px rgba(0,0,0,0.76);
+
 }
 
 .deleteButton:active{
     margin-top: 3px;
 }
 
+
+button:hover{
+    margin-top: 2px;
+    transition: 0.5s;
+    transform: translateY(2px);
+}
+
 .purchased{
-    background: #00805a;
+    background: green;
 }
 
 .purchased p{
     text-decoration: line-through;
+}
+
+.item_buttons__container{
+    width: 15rem;
+    margin: auto 0;
+}
+
+.item_buttons__container button{
+    border: unset;
+    height: 2rem;
+    margin: 0.3rem;
+    padding: 0.3rem;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #FFB366;
+    box-shadow: 2px 2px 6px 1px rgba(0,0,0,0.76);
+    -webkit-box-shadow: 2px 2px 6px 1px rgba(0,0,0,0.76);
+    -moz-box-shadow: 2px 2px 6px 1px rgba(0,0,0,0.76);
+}
+
+#totalPriceDiv{
+    margin-top: 2rem;
+    font-weight: 800;
+    font-size: 1.5rem;
 }
