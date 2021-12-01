@@ -6,11 +6,13 @@
 body{
     background: url(images/bg-intro-desktop.png) rgb(255, 121, 120);
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
 nav{
     background: #FF3333;
     height: 3rem;
+    width: 100%;
     line-height: 3rem;
     color: white;
     padding-left: 2rem;
@@ -29,7 +31,6 @@ nav{
     width: 42rem;
     margin: 2rem auto;
     border-radius: 10px;
-
 }
 
 #itemForm label{
@@ -165,4 +166,91 @@ button:hover{
     margin-top: 2rem;
     font-weight: 800;
     font-size: 1.5rem;
+}
+
+@media only screen and (max-width:540px){
+    .container{
+        width: 30rem;
+    }
+
+    .item{
+        margin-left: 1rem;
+        margin-right: 3rem;
+        width: 31.5rem;
+    }
+    
+    .item_buttons__container button{
+        padding: 0.2rem;
+    }
+    #nameInput{
+        margin-top: 1rem;
+    }
+    .itemInfo{
+        width: 10rem;
+    }
+}
+
+@media only screen and (max-width:425px){
+    .container{
+        width: 20rem;
+    }
+    #nameInput{
+        width: 11rem;
+    }
+    #quantityInput, #priceInput{
+        width: 4rem;
+    }
+
+    .items_Price__Container{
+        width: 20rem;
+        margin-left: 0.7rem;
+    }
+    
+    .item{
+        width: 22rem;
+    }
+    .checkbox{
+        height: 1rem;
+        width: 2.3rem;
+        margin-top: 1rem;
+    }
+    .itemInfo{
+        width: 6rem;
+    }
+    
+}
+
+@media only screen and (max-width:375px){
+    .item{
+        width: 21.6rem;
+        margin-left: 0;
+    }
+    
+    .item_buttons__container button{
+        padding: 0.2rem;
+    }
+}
+
+@media only screen and (max-width:320px){
+    .container{
+        width: 16.5rem;
+    }
+    #nameInput{
+        margin-top: 1rem;
+        width: 9rem;
+    }
+    .item{
+        margin-right: 3rem;
+        width: 18rem;
+    }
+    
+    .item_buttons__container{
+        width: 10rem;
+    }
+    .updateItemButton{
+        width: 7rem;
+    }
+    .itemInfo{
+        width: 4rem;
+    }
 }
