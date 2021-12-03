@@ -15,7 +15,7 @@ The website was built with HTML, CSS and Javascript.
 
 ### Screenshot
 
-![](https://github.com/franklynwisdom/franklyn-Okenwa-portfolio/blob/master/portfolio-home-page.png)
+![](https://github.com/teamNewDev/fo-shopping-app/blob/master/shopping-app-screenshot.PNG)
 
 ### Link
 - Live Site URL: (https://teamnewdev.github.io/fo-shopping-app/)
