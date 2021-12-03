@@ -11,7 +11,7 @@ This is a web app that allows users to add items that they want to buy or shop f
 
 ## Overview
 This is a web app that allows users to add items that they want to buy or shop for
-The website was built with HTML, CSS and Javascript.
+The web app was built with HTML, CSS and Javascript.
 
 ### Screenshot
 
