@@ -53,6 +53,8 @@ const populateItemsDiv = async () => {
         const totalPrice = arrayOfPrices.reduce((a,b) => a+b, 0)
         totalPriceDiv.innerText = 'Total price: ' + new Intl.NumberFormat('en-us', { style: 'currency', currency: 'USD' , maximumSignificantDigits: 3}).format(totalPrice)
 
+        } else if((arrayOfPrices.reduce((a,b) => a+b, 0)) === 0){
+            totalPriceDiv.style.cssText = 'display: block'
         }
 
     }
