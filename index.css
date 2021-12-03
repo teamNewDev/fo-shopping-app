@@ -166,10 +166,9 @@ button:hover{
     font-weight: 800;
     font-size: 1.5rem;
     height: 4rem;
-    width: 25rem;
+    width: 20rem;
     padding-left:1rem;
-    padding-top: 1rem;
-    
+    padding-top: 1rem;    
 }
 
 @media only screen and (max-width:540px){
@@ -193,6 +192,10 @@ button:hover{
 
     .itemInfo{
         width: 10rem;
+    }
+
+    #totalPriceDiv{
+        margin-left: 1.5rem;
     }
 }
 
@@ -239,28 +242,51 @@ button:hover{
     .item_buttons__container button{
         padding: 0.2rem;
     }
+
+    #totalPriceDiv{
+        margin-left: 0rem;
+    }
 }
+
+@media only screen and (max-width:360px){
+    .item{
+        width: 21.5rem;
+        margin-left: -0.5rem;
+    }
+
+    #totalPriceDiv{
+        margin-left: -0.2rem;
+    }
+}
+
 
 @media only screen and (max-width:320px){
     .container{
         width: 16.5rem;
     }
+
     #nameInput{
         margin-top: 1rem;
         width: 9rem;
     }
+
     .item{
-        margin-right: 3rem;
         width: 18rem;
     }
     
     .item_buttons__container{
         width: 10rem;
     }
+
     .updateItemButton{
         width: 7rem;
     }
+
     .itemInfo{
         width: 4rem;
+    }
+
+    #totalPriceDiv{
+        width: 17rem;
     }
 }
