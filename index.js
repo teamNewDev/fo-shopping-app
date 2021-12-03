@@ -9,7 +9,6 @@ const nameInput = document.getElementById('nameInput')
 const quantityInput = document.getElementById('quantityInput')
 const priceInput = document.getElementById('priceInput')
 
-
 const populateItemsDiv = async () => {
     const allItems = await db.items.reverse().toArray()
 
@@ -47,13 +46,18 @@ const populateItemsDiv = async () => {
     `).join('')
 
     const arrayOfPrices = allItems.map(item => item.price * item.quantity)
-    const totalPrice = arrayOfPrices.reduce((a,b) => a+b, 0)
 
-    totalPriceDiv.innerText = 'Total price: $' + totalPrice
-}
+    if (itemsDiv.childNodes.length !== 0) {
+       
+        totalPriceDiv.style.cssText = ' background-color: white; border-radius: 10px; box-shadow: 1px 8px 4px rgb(213, 100, 106);'
+        const totalPrice = arrayOfPrices.reduce((a,b) => a+b, 0)
+        totalPriceDiv.innerText = 'Total price: ' + new Intl.NumberFormat('en-us', { style: 'currency', currency: 'USD' , maximumSignificantDigits: 3}).format(totalPrice)
+
+        }
+
+    }
 
 window.onload = populateItemsDiv()
-
 
 itemForm.onsubmit = async (event) => {
     event.preventDefault()
@@ -66,8 +70,12 @@ itemForm.onsubmit = async (event) => {
     await populateItemsDiv()
 
     itemForm.reset()
-}
 
+   if (itemsDiv.childNodes.length !== 0) {
+    totalPriceDiv.style.cssText = 'display: block;background-color: white; border-radius: 10px; box-shadow: 1px 8px 4px rgb(213, 100, 106);'
+    }
+}
+    
 const toggleItemStatus = async (event, id) => {
     await db.items.update(id, {isPurchased: !!event.target.checked})
     await populateItemsDiv()
@@ -76,49 +84,26 @@ const toggleItemStatus = async (event, id) => {
 const removeItem = async (id) => {
     await db.items.delete(id)
     await populateItemsDiv()
+    if (itemsDiv.childNodes.length == 0) {
+        totalPriceDiv.style.cssText = 'display: none'
+    }
 }
 
 const clearAllItem = async () => {
     await db.items.clear()
     await populateItemsDiv()
-    console.log('deleted all')
+    totalPriceDiv.style.cssText = 'display: none'
 }
 
-const editItem = (event, id) => {
+const editItem = () => {
     nameInput.focus()
-    console.log('new focus');
-    console.log(id);
-    console.log(event.target.value);
 }
 
 const updateItem = async (event, id) => {
     await db.items.update(id, {name: nameInput.value, price: priceInput.value, quantity: quantityInput.value})
-    console.log('item updated');
-    console.log(event.target.value);
-    console.log(id);
-
     await populateItemsDiv()
     itemForm.reset()
-
 
 }
 
 clearAllItemButton.addEventListener('click',clearAllItem)
-
-
-// const g = async (event) => {
-//     console.log('submit');
-//     event.preventDefault()
-
-//     const name = document.getElementById('nameInput').value
-//     const quantity = document.getElementById('quantityInput').value
-//     const price = document.getElementById('priceInput').value
-
-//     await db.items.add({name, quantity, price})
-//     itemForm.reset()
-
-
-// }
-
-// itemForm.addEventListener('submit', g);
-

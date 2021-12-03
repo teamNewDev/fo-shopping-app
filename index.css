@@ -25,6 +25,7 @@ nav{
     background-color: white;
     padding: 1rem;
     border-radius: 10px;
+    box-shadow: 1px 8px 4px rgb(213, 100, 106);
 }
 
 .items_Price__Container{
@@ -101,6 +102,7 @@ nav{
     width: 41.5rem;
     border-left: 8px solid #FF3333;
     border-radius: 0 5px 5px 0;
+    box-shadow: 1px 8px 4px rgb(213, 100, 106);
 }
 
 .checkbox{
@@ -118,17 +120,14 @@ nav{
     border: unset;
     font-size: 0.8rem;
     width: 2.5rem;
-    /*box-shadow: 0.8px 3px 2px black;*/
     box-shadow: 2px 3px 12px 1px rgba(0,0,0,0.76);
     -webkit-box-shadow: 2px 3px 12px 1px rgba(0,0,0,0.76);
     -moz-box-shadow: 2px 3px 12px 1px rgba(0,0,0,0.76);
-
 }
 
 .deleteButton:active{
     margin-top: 3px;
 }
-
 
 button:hover{
     margin-top: 2px;
@@ -166,6 +165,11 @@ button:hover{
     margin-top: 2rem;
     font-weight: 800;
     font-size: 1.5rem;
+    height: 4rem;
+    width: 25rem;
+    padding-left:1rem;
+    padding-top: 1rem;
+    
 }
 
 @media only screen and (max-width:540px){
@@ -182,9 +186,11 @@ button:hover{
     .item_buttons__container button{
         padding: 0.2rem;
     }
+
     #nameInput{
         margin-top: 1rem;
     }
+
     .itemInfo{
         width: 10rem;
     }
@@ -194,9 +200,11 @@ button:hover{
     .container{
         width: 20rem;
     }
+
     #nameInput{
         width: 11rem;
     }
+
     #quantityInput, #priceInput{
         width: 4rem;
     }
@@ -209,11 +217,13 @@ button:hover{
     .item{
         width: 22rem;
     }
+
     .checkbox{
         height: 1rem;
         width: 2.3rem;
         margin-top: 1rem;
     }
+    
     .itemInfo{
         width: 6rem;
     }
